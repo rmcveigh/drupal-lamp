@@ -1,0 +1,83 @@
+{
+  "sources": {
+    "apt": {
+      "locked_version": "2.3.4"
+    },
+    "apache2": {
+      "locked_version": "1.8.14"
+    },
+    "build-essential": {
+      "locked_version": "1.4.2"
+    },
+    "database": {
+      "locked_version": "1.5.2"
+    },
+    "git": {
+      "locked_version": "2.8.4"
+    },
+    "dmg": {
+      "locked_version": "2.0.8"
+    },
+    "mysql": {
+      "locked_version": "4.0.20"
+    },
+    "openssl": {
+      "locked_version": "1.1.0"
+    },
+    "php": {
+      "locked_version": "1.2.6"
+    },
+    "ssh_known_hosts": {
+      "locked_version": "1.1.0"
+    },
+    "sudo": {
+      "locked_version": "2.2.2"
+    },
+    "drupal": {
+      "locked_version": "0.1.0",
+      "git": "https://github.com/newmediadenver/drupal",
+      "ref": "573ab89a060723794c56741fecd01cecccb53039"
+    },
+    "drupal-nfs": {
+      "locked_version": "0.1.0",
+      "git": "https://github.com/arknoll/drupal-nfs",
+      "ref": "7e6490493599a07a06b72ba25543a0a6d240b94a"
+    },
+    "postgresql": {
+      "locked_version": "3.3.4"
+    },
+    "aws": {
+      "locked_version": "1.0.0"
+    },
+    "xfs": {
+      "locked_version": "1.1.0"
+    },
+    "windows": {
+      "locked_version": "1.12.8"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    },
+    "yum": {
+      "locked_version": "2.4.4"
+    },
+    "runit": {
+      "locked_version": "1.5.8"
+    },
+    "yum-epel": {
+      "locked_version": "0.2.0"
+    },
+    "xml": {
+      "locked_version": "1.2.0"
+    },
+    "partial_search": {
+      "locked_version": "1.0.6"
+    },
+    "nfs": {
+      "locked_version": "1.0.0"
+    },
+    "line": {
+      "locked_version": "0.5.1"
+    }
+  }
+}
