@@ -42,7 +42,7 @@ Vagrant.configure("2") do |config|
 
     server.vm.provider :virtualbox do |v|
       v.name = "drupal"
-      v.customize ["modifyvm", :id, "--memory", "1024"]
+      v.customize ["modifyvm", :id, "--memory", "3024"]
     end
 
     server.vm.hostname = "drupal.local"
@@ -50,12 +50,12 @@ Vagrant.configure("2") do |config|
     server.vm.network :private_network, ip: "192.168.50.5"
 
     # For Vagrant-provided synced folders
-    # Ensure the second parameter (/assets) is the same as the Default['drupal']['server']['assets'] 
+    # Ensure the second parameter (/assets) is the same as the Default['drupal']['server']['assets']
     # destination in your drupal_lamp.json file
     #server.vm.synced_folder "assets", "/assets", :nfs => false, :owner => "www-data", :group => "www-data"
-    
+
     # For Vagrant-provided nfs support
-    # Ensure the second parameter (/assets) is the same as the Default['drupal']['server']['assets'] 
+    # Ensure the second parameter (/assets) is the same as the Default['drupal']['server']['assets']
     # destination in your drupal_lamp.json file
     #server.vm.synced_folder "assets", "/assets", :nfs => true
 

@@ -1,11 +1,36 @@
 {
+  "nfs_exports": {
+    "/srv/www/peeksi/current":  {
+      "clients": {
+        "*": {
+          "writeable": true,
+          "sync": false,
+          "options": [
+            "no_subtree_check",
+            "all_squash",
+            "async"
+          ],
+          "anon_user_name": "www-data",
+          "anon_group_name": "www-data"
+        }
+      }
+    }
+  },
   "drupal": {
     "sites": {
-      "example": {
+      "peeksi": {
         "active": true,
         "deploy": {
           "action": ["deploy", "install"],
           "releases": 1
+        },
+        "drush_make": {
+          "api": "2",
+          "files": {
+            "default": "build-peeksi.make",
+            "core": "drupal-org-core.make"
+          },
+          "template": true
         },
         "drupal": {
           "version": "7.26",
@@ -22,7 +47,7 @@
                 "location": "sites/default/settings.php"
               }
             },
-            "db_name": "example",
+            "db_name": "peeksi",
             "db_host": "localhost",
             "db_prefix": "",
             "db_driver": "mysql",
@@ -31,14 +56,14 @@
         },
         "repository": {
           "host": "github.com",
-          "uri": "https://github.com/drupal/drupal.git",
-          "revision": "7.26"
+          "uri": "git@github.com:b-ry/peeksi.git",
+          "revision": "master"
         },
         "web_app": {
           "80": {
-            "server_name": "example.local",
+            "server_name": "peeksi.local",
             "rewrite_engine": "On",
-            "docroot": "/srv/www/example/current"
+            "docroot": "/srv/www/peeksi/current"
           }
         }
       }
