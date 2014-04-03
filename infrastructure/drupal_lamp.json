@@ -1,6 +1,6 @@
 {
   "nfs_exports": {
-    "/srv/www/peeksi/current":  {
+    "/assets":  {
       "clients": {
         "*": {
           "writeable": true,
