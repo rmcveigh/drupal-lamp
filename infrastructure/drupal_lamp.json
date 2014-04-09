@@ -16,6 +16,19 @@
       }
     }
   },
+  "drupal_frontend": {
+    "css_preprocessor":{
+      "/srv/www/peeksi/current/profiles/peeksi/themes/custom/peeksi_bare":{
+        "gems": [
+          "bundler"
+        ],
+        "commands": [
+          "bundle install && bundle update",
+          "bundle exec compass compile"
+        ]
+      }
+    }
+  },
   "drupal": {
     "sites": {
       "peeksi": {
@@ -39,7 +52,7 @@
             "--clean-url": 1
           },
           "settings": {
-            "profile": "standard",
+            "profile": "peeksi",
             "files": "sites/default/files",
             "cookbook": "drupal",
             "settings": {
@@ -57,7 +70,7 @@
         "repository": {
           "host": "github.com",
           "uri": "git@github.com:b-ry/peeksi.git",
-          "revision": "master"
+          "revision": "theme"
         },
         "web_app": {
           "80": {

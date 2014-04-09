@@ -43,6 +43,11 @@
       "git": "https://github.com/arknoll/drupal-nfs",
       "ref": "7e6490493599a07a06b72ba25543a0a6d240b94a"
     },
+    "drupal-frontend": {
+      "locked_version": "0.1.0",
+      "git": "https://github.com/timodwhit/drupal-frontend",
+      "ref": "42a03d57fff9bf9d318941d3df15193aec2d228e"
+    },
     "postgresql": {
       "locked_version": "3.3.4"
     },
