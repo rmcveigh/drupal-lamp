@@ -1,7 +1,80 @@
 {
+  "build_essential": {
+    "compiletime": true
+  },
+  "db": {
+      "driver": "mysql",
+      "client_recipe": "mysql::client",
+      "root": "root",
+      "grant_hosts": [
+        "localhost"
+      ],
+      "users": {
+        "root": "root",
+        "replication": "replication",
+        "debian": "debian"
+      }
+  },
+  "php": {
+    "directives": {
+      "memory_limit": "1024M",
+      "upload_max_filesize": "200M",
+      "post_max_size": "210M"
+    },
+    "conf_dir" : "/etc/php5/apache2"
+  },
+  "nodejs":{
+    "packages": ["grunt","grunt-cli"]
+  },
+  "mysql": {
+    "allow_remote_root": "true",
+    "tunable": {
+      "max_allowed_packet": "16M",
+      "key_buffer_size": "32M",
+      "max_connect_errors": "1000",
+      "tmp_table_size": "32M",
+      "max_connections": "500",
+      "thread_cache_size": "50",
+      "table_open_cache": "512",
+      "innodb_flush_log_at_trx_commit": "0",
+      "innodb_file_per_table": "1",
+      "innodb_buffer_pool_size": "128M",
+      "innodb_flush_method": "O_DIRECT",
+      "sync_binlog": "0"
+    }
+  },
+  "apache": {
+    "prefork": {
+      "startservers": "1",
+      "minspareservers": "1",
+      "maxspareservers": "2",
+      "maxclients": "15",
+      "serverlimit": "15",
+      "keepalive": "On",
+      "keepalivetimeout": "4",
+      "maxkeepaliverequests": "1000"
+    }
+  },
+  "nfs_exports": {
+    "/assets": {
+      "clients": {
+        "*": {
+          "writeable": true,
+          "sync": false,
+          "options": [
+            "no_subtree_check",
+            "all_squash",
+            "async"
+          ],
+          "anon_user_name": "www-data",
+          "anon_group_name": "www-data"
+        }
+      }
+    }
+  },
   "drupal": {
     "sites": {
-      "example": {
+      "gtli": {
         "active": true,
         "deploy": {
           "action": ["deploy", "install"],
@@ -14,7 +87,7 @@
             "--clean-url": 1
           },
           "settings": {
-            "profile": "standard",
+            "profile": "gtli",
             "files": "sites/default/files",
             "cookbook": "drupal",
             "settings": {
@@ -22,7 +95,7 @@
                 "location": "sites/default/settings.php"
               }
             },
-            "db_name": "example",
+            "db_name": "gtli",
             "db_host": "localhost",
             "db_prefix": "",
             "db_driver": "mysql",
@@ -31,14 +104,14 @@
         },
         "repository": {
           "host": "github.com",
-          "uri": "https://github.com/drupal/drupal.git",
-          "revision": "7.26"
+          "uri": "git@github.com:rmcveigh/gtli.git",
+          "revision": "gtli-98"
         },
         "web_app": {
           "80": {
-            "server_name": "example.local",
+            "server_name": "gtli.local",
             "rewrite_engine": "On",
-            "docroot": "/srv/www/example/current"
+            "docroot": "/srv/www/gtli/current"
           }
         }
       }

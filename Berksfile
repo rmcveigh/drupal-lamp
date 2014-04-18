@@ -10,3 +10,5 @@ cookbook 'php', '~> 1.2.6'
 cookbook 'ssh_known_hosts', '~> 1.1.0'
 cookbook 'sudo', '~> 2.2.2'
 cookbook "drupal", git: "https://github.com/newmediadenver/drupal", tag: "v1.0.0"
+cookbook 'drupal-nfs', git: 'git://github.com/arknoll/drupal-nfs'
+cookbook 'drupal-frontend', git: "https://github.com/timodwhit/drupal-frontend", branch: "master"
