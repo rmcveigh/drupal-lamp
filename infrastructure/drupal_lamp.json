@@ -46,7 +46,7 @@
           "template": true
         },
         "drupal": {
-          "version": "7.26",
+          "version": "7.28",
           "install": {
             "install_configure_form.update_status_module": "'array(FALSE,FALSE)'",
             "--clean-url": 1
@@ -69,8 +69,8 @@
         },
         "repository": {
           "host": "github.com",
-          "uri": "git@github.com:b-ry/peeksi.git",
-          "revision": "theme"
+          "uri": "git@github.com:rmcveigh/peeksi.git",
+          "revision": "master"
         },
         "web_app": {
           "80": {

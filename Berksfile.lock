@@ -79,7 +79,7 @@
       "locked_version": "1.0.6"
     },
     "nfs": {
-      "locked_version": "1.0.0"
+      "locked_version": "0.5.0"
     },
     "line": {
       "locked_version": "0.5.1"

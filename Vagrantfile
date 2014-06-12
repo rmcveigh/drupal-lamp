@@ -41,11 +41,11 @@ Vagrant.configure("2") do |config|
     end
 
     server.vm.provider :virtualbox do |v|
-      v.name = "drupal"
+      v.name = "peeksi"
       v.customize ["modifyvm", :id, "--memory", "3024"]
     end
 
-    server.vm.hostname = "drupal.local"
+    server.vm.hostname = "peeksi.local"
 
     server.vm.network :private_network, ip: "192.168.50.5"
 
