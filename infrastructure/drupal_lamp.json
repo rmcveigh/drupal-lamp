@@ -34,16 +34,8 @@
       "peeksi": {
         "active": true,
         "deploy": {
-          "action": ["deploy", "install"],
+          "action": ["import", "update"],
           "releases": 1
-        },
-        "drush_make": {
-          "api": "2",
-          "files": {
-            "default": "build-peeksi.make",
-            "core": "drupal-org-core.make"
-          },
-          "template": true
         },
         "drupal": {
           "version": "7.28",
@@ -64,13 +56,13 @@
             "db_host": "localhost",
             "db_prefix": "",
             "db_driver": "mysql",
-            "db_file": ""
+            "db_file": "/vagrant/Peeksi-2014-08-19T16-23-42.mysql"
           }
         },
         "repository": {
           "host": "github.com",
           "uri": "git@github.com:rmcveigh/peeksi.git",
-          "revision": "master"
+          "revision": "qa"
         },
         "web_app": {
           "80": {
