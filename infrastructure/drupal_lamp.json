@@ -23,9 +23,6 @@
     },
     "conf_dir" : "/etc/php5/apache2"
   },
-  "nodejs":{
-    "packages": ["grunt","grunt-cli"]
-  },
   "mysql": {
     "allow_remote_root": "true",
     "tunable": {
@@ -72,6 +69,19 @@
       }
     }
   },
+  "drupal_frontend": {
+    "css_preprocessor":{
+      "/srv/www/gtli/current/profiles/gtli/themes/custom/gtli_bare":{
+        "gems": [
+          "bundler"
+        ],
+        "commands": [
+          "bundle install && bundle update",
+          "bundle exec compass compile"
+        ]
+      }
+    }
+  },
   "drupal": {
     "sites": {
       "gtli": {
@@ -81,7 +91,7 @@
           "releases": 1
         },
         "drupal": {
-          "version": "7.26",
+          "version": "7.27",
           "install": {
             "install_configure_form.update_status_module": "'array(FALSE,FALSE)'",
             "--clean-url": 1
@@ -105,7 +115,7 @@
         "repository": {
           "host": "github.com",
           "uri": "git@github.com:rmcveigh/gtli.git",
-          "revision": "gtli-98"
+          "revision": "qa"
         },
         "web_app": {
           "80": {
