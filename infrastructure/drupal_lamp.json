@@ -87,12 +87,14 @@
     },
     "css_preprocessor": {
       "/srv/www/colorado/current/htdocs/sites/all/themes/mmg_aurora": {
+        "active": true,
         "gems": [
           "bundler"
         ],
         "commands": [
           "bundle install && bundle update",
-          "bundle exec compass compile"
+          "bundle exec compass compile",
+          "npm install"
         ]
       }
     }
