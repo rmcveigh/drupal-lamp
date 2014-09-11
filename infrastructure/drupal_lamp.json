@@ -93,8 +93,8 @@
         ],
         "commands": [
           "bundle install && bundle update",
-          "bundle exec compass compile",
-          "npm install"
+          "npm install",
+          "grunt build"
         ]
       }
     }
