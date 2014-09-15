@@ -94,4 +94,5 @@ env_run_lists '_default' => [
                 'recipe[drupal-frontend::nodejs]',
                 'recipe[drupal-frontend]',
                 'recipe[drupal-solr]',
+                'recipe[drupal::perms]',
               ]
