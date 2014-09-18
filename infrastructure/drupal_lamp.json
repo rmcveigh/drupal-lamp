@@ -6,57 +6,61 @@
   },
   "drupal": {
     "sites": {
-      "colorado": {
+      "mmg_microsite": {
         "active": true,
         "deploy": {
-          "action": ["deploy", "import", "update"],
+          "action": ["deploy", "install"],
           "releases": 3
         },
+        "drush_make": {
+          "api": "2",
+          "files": {
+            "default": "build-mmg-microsite.make",
+            "core": "drupal-org-core.make"
+          },
+          "arguments": [
+            "--working-copy"
+          ],
+          "template": false
+        },
         "drupal": {
-          "version": "7.26",
+          "version": "7.31",
           "registry_rebuild": false,
           "install": {
             "install_configure_form.update_status_module": "'array(FALSE,FALSE)'",
             "--clean-url": 1
           },
           "settings": {
-            "profile": "mmg_custom",
-            "docroot": "htdocs",
-            "files": "htdocs/sites/default/files",
+            "profile": "mmg_microsite",
+            "docroot": "",
+            "files": "sites/default/files",
             "cookbook": "drupal",
             "settings": {
               "default": {
-                "ignore": true,
-                "location": "htdocs/sites/default/settings.php"
-              },
-              "local_dev": {
-                "location": "sites/all/settings.colorado.localdev.php"
+                "location": "sites/default/settings.php"
               }
             },
-            "db_name": "colorado",
+            "db_name": "mmg-microsite",
             "db_host": "localhost",
             "db_prefix": "",
             "db_driver": "mysql",
-            "db_file": "/vagrant/sites/colorado/dbs/colorado09102014.sql"
+            "db_file": ""
           }
         },
         "repository": {
           "host": "",
-          "uri": "/vagrant/sites/colorado/code",
-          "revision": "grunt",
-          "submodule": true,
+          "uri": "/vagrant/sites/mmg_microsite/code",
+          "revision": "master",
+          "submodule": false,
           "remotes": {
-            "upstream": "ryan@pluto.milesmedia.com:/home/ryan/colorado.com",
-            "bobby": "git@10.20.1.17:bobby/colorado-com.git",
-            "bobby-pluto": "ryan@pluto.milesmedia.com:/home/bobby/colorado.com",
-            "tim": "ryan@pluto.milesmedia.com:/home/tim/colorado.com"
+            "upstream": "ryan@pluto.milesmedia.com:/home/ryan/mmg_microsite"
           }
         },
         "web_app": {
           "80": {
-            "server_name": "colorado.local",
+            "server_name": "mmg-microsite.local",
             "rewrite_engine": "On",
-            "docroot": "/srv/www/colorado/current/htdocs"
+            "docroot": "/srv/www/mmg_microsite/current"
           }
         }
       }
@@ -86,15 +90,13 @@
       "packages":["grunt", "grunt-cli", "bower"]
     },
     "css_preprocessor": {
-      "/srv/www/colorado/current/htdocs/sites/all/themes/mmg_aurora": {
-        "active": true,
+      "/srv/www/colorado/current/htdocs/sites/all/themes/mmg_microsite_bare": {
+        "active": false,
         "gems": [
           "bundler"
         ],
         "commands": [
-          "bundle install && bundle update",
-          "npm install",
-          "grunt build"
+          "bundle install && bundle update"
         ]
       }
     }
