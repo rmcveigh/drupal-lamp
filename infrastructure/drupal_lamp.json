@@ -12,17 +12,6 @@
           "action": ["deploy", "install"],
           "releases": 3
         },
-        "drush_make": {
-          "api": "2",
-          "files": {
-            "default": "build-mmg-microsite.make",
-            "core": "drupal-org-core.make"
-          },
-          "arguments": [
-            "--working-copy"
-          ],
-          "template": false
-        },
         "drupal": {
           "version": "7.31",
           "registry_rebuild": false,
@@ -49,7 +38,7 @@
         },
         "repository": {
           "host": "",
-          "uri": "/vagrant/sites/mmg_microsite/code",
+          "uri": "/vagrant/sites/mmg_microsite/drupal",
           "revision": "master",
           "submodule": false,
           "remotes": {
