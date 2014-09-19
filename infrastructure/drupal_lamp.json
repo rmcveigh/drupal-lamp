@@ -38,7 +38,7 @@
         },
         "repository": {
           "host": "",
-          "uri": "/vagrant/sites/mmg_microsite/drupal",
+          "uri": "/vagrant/sites/mmg_microsite/code",
           "revision": "master",
           "submodule": false,
           "remotes": {
@@ -79,13 +79,14 @@
       "packages":["grunt", "grunt-cli", "bower"]
     },
     "css_preprocessor": {
-      "/srv/www/colorado/current/htdocs/sites/all/themes/mmg_microsite_bare": {
-        "active": false,
+      "/srv/www/colorado/current/htdocs/profiles/mmg_microsite/themes/custom/mmg_microsite_bare": {
+        "active": true,
         "gems": [
           "bundler"
         ],
         "commands": [
-          "bundle install && bundle update"
+          "bundle install && bundle update",
+          "npm install"
         ]
       }
     }
