@@ -6,7 +6,7 @@
   },
   "drupal": {
     "sites": {
-      "mmg_microsite": {
+      "mmg_san_luis": {
         "active": true,
         "deploy": {
           "action": ["deploy", "install"],
@@ -20,7 +20,7 @@
             "--clean-url": 1
           },
           "settings": {
-            "profile": "mmg_microsite",
+            "profile": "mmg_san_luis",
             "docroot": "",
             "files": "sites/default/files",
             "cookbook": "drupal",
@@ -29,7 +29,7 @@
                 "location": "sites/default/settings.php"
               },
               "localdev": {
-                "location": "profiles/mmg_microsite/settings.mmg_microsite.localdev.php"
+                "location": "profiles/mmg_san_luis/settings.mmg_san_luis.localdev.php"
               }
             },
             "db_name": "mmg-microsite",
@@ -41,18 +41,18 @@
         },
         "repository": {
           "host": "",
-          "uri": "/vagrant/sites/mmg_microsite/code",
-          "revision": "profiles",
+          "uri": "/vagrant/sites/mmg_san_luis/code",
+          "revision": "master",
           "submodule": false,
           "remotes": {
-            "upstream": "ryan@pluto.milesmedia.com:/home/ryan/mmg_microsite"
+            "upstream": "ryan@pluto.milesmedia.com:/home/ryan/mmg_san_luis"
           }
         },
         "web_app": {
           "80": {
             "server_name": "mmg-microsite.local",
             "rewrite_engine": "On",
-            "docroot": "/srv/www/mmg_microsite/current"
+            "docroot": "/srv/www/mmg_san_luis/current"
           }
         }
       }
@@ -82,7 +82,7 @@
       "packages":["grunt", "grunt-cli", "bower"]
     },
     "css_preprocessor": {
-      "/srv/www/mmg_microsite/current/profiles/mmg_microsite/themes/custom/mmg_microsite_bare": {
+      "/srv/www/mmg_san_luis/current/profiles/mmg_san_luis/themes/custom/mmg_san_luis_bare": {
         "active": true,
         "gems": [
           "bundler"
