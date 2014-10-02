@@ -27,6 +27,9 @@
             "settings": {
               "default": {
                 "location": "sites/default/settings.php"
+              },
+              "localdev": {
+                "location": "profiles/mmg_microsite/settings.mmg_microsite.localdev.php"
               }
             },
             "db_name": "mmg-microsite",
@@ -39,7 +42,7 @@
         "repository": {
           "host": "",
           "uri": "/vagrant/sites/mmg_microsite/code",
-          "revision": "master",
+          "revision": "profiles",
           "submodule": false,
           "remotes": {
             "upstream": "ryan@pluto.milesmedia.com:/home/ryan/mmg_microsite"
@@ -79,14 +82,15 @@
       "packages":["grunt", "grunt-cli", "bower"]
     },
     "css_preprocessor": {
-      "/srv/www/colorado/current/htdocs/profiles/mmg_microsite/themes/custom/mmg_microsite_bare": {
+      "/srv/www/mmg_microsite/current/profiles/mmg_microsite/themes/custom/mmg_microsite_bare": {
         "active": true,
         "gems": [
           "bundler"
         ],
         "commands": [
           "bundle install && bundle update",
-          "npm install"
+          "npm install",
+          "grunt build"
         ]
       }
     }
