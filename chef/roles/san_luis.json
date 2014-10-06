@@ -1,13 +1,13 @@
 {
-  "name": "mmg_microsite",
-  "description": "The role for mmg_microsite",
+  "name": "san_luis",
+  "description": "The role for san_luis",
   "chef_type": "role",
   "json_class": "Chef::Role",
   "default_attributes": {},
   "override_attributes": {
     "drupal": {
       "sites": {
-        "mmg_microsite": {
+        "san_luis": {
           "active": true,
           "deploy": {
             "action": ["deploy", "install"]
@@ -27,10 +27,10 @@
           },
           "repository": {
             "host": "",
-            "uri": "/vagrant/sites/mmg_microsite/code",
+            "uri": "/vagrant/sites/san_luis/code",
             "revision": "master",
             "remotes": {
-              "upstream": "ryan@pluto.milesmedia.com:/home/ryan/mmg_microsite"
+              "upstream": "ryan@pluto.milesmedia.com:/home/ryan/san_luis"
             }
           }
         }
@@ -45,7 +45,7 @@
         "packages":["grunt", "grunt-cli", "bower"]
       },
       "css_preprocessor": {
-        "/srv/www/mmg_microsite/current/profiles/mmg_microsite/themes/custom/mmg_microsite_bare": {
+        "/srv/www/san_luis/current/profiles/mmg_microsite/themes/custom/mmg_microsite_bare": {
           "active": true,
           "gems": [
             "bundler"

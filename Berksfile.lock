@@ -6,7 +6,9 @@ DEPENDENCIES
   database (~> 1.5.2)
   dmg (~> 2.0.8)
   drupal
-    path: ../../git/drup-miles
+    git: https://github.com/timodwhit/drupal
+    revision: 50154d9992da6a5d866e6f92ebbde112646aba65
+    branch: miles
   drupal-frontend
     git: https://github.com/timodwhit/drupal-frontend
     revision: d94e35bbc761f84a1fa11a981c324b12b08a55f8
@@ -32,7 +34,7 @@ GRAPH
   aws (2.4.0)
   build-essential (1.4.4)
   chef-solo-search (0.5.1)
-  chef-sugar (2.2.0)
+  chef-sugar (2.3.0)
   chef_handler (1.1.6)
   curl (2.0.0)
   database (1.5.2)
@@ -79,7 +81,7 @@ GRAPH
     build-essential (>= 0.0.0)
     mysql (>= 0.0.0)
     xml (>= 0.0.0)
-  postgresql (3.4.4)
+  postgresql (3.4.6)
     apt (>= 1.9.0)
     build-essential (>= 0.0.0)
     openssl (>= 0.0.0)
